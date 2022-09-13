@@ -12,4 +12,4 @@ sudo systemctl stop umeed.service
 ```
 
 ## 2. Reset the blockchain database, remove address book, and reset data/priv_validator_state.json to the genesis state, then download new addrbook.json
-'''
+
