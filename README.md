@@ -1,7 +1,7 @@
 # Umee State Sync
 
-### Public RPC endpoint: http://95.216.2.219:26657/  
-### Public API: http://95.216.2.219:1317/
+#### Public RPC endpoint: http://95.216.2.219:26657/  
+#### Public API: http://95.216.2.219:1317/
 
 # Guide to sync your node using State Sync:
 
@@ -17,7 +17,7 @@ umeed unsafe-reset-all
 wget -qO $HOME/.umee/config/addrbook.json https://raw.githubusercontent.com/Egozit/umee-state-sync/main/addrbook.json
 ```  
 
-## 3. ADD variables to store RPC address and Block info requested from our RPC
+## 3. Add variables to store RPC address and Block info requested from our RPC
 ```
 SNAP_RPC1="http://95.216.2.219:26657" \
 SNAP_RPC2="http://95.216.2.219:26657" \
