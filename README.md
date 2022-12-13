@@ -1,7 +1,7 @@
 # Umee State Sync
 
-#### Public RPC endpoint: http://95.216.2.219:26657/  
-#### Public API: http://95.216.2.219:1317/
+#### Public RPC endpoint: http://95.216.76.51:26657/  
+#### Public API: http://95.216.76.51:1317/
 
 # Guide to sync your node using State Sync:
 
@@ -19,8 +19,8 @@ wget -qO $HOME/.umee/config/addrbook.json https://raw.githubusercontent.com/Egoz
 
 ## 3. Add variables to store RPC address and Block info requested from our RPC
 ```
-SNAP_RPC1="http://95.216.2.219:26657" \
-SNAP_RPC2="http://95.216.2.219:26657" \
+SNAP_RPC1="http://95.216.76.51:26657" \
+SNAP_RPC2="http://95.216.76.51:26657" \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC2/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 500)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC2/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
@@ -41,7 +41,7 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.umee/conf
 
 ## 6. Add our RPC as a persistent peer
 ```
-peers="44544b49eb21c1cbc3740c36f331445e4f866366@95.216.2.219:26657" \
+peers="ed0b7f7d06444daa07514edd10de51405a6cfba9@95.216.76.51:26657" \
 && sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.umee/config/config.toml 
 ```
 
